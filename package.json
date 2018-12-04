@@ -1,6 +1,6 @@
 {
   "name": "@vicoders/support",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Vicoders Support",
   "scripts": {
     "test": "jest --forceExit",
@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codersvn/kit_nodejs.git"
+    "url": "git+https://github.com/codersvn/supporter.git"
   },
   "keywords": [
-    "Repository",
-    "Sequelize"
+    "Vicoders",
+    "Codersvn",
+    "Supporter"
   ],
   "author": "Hieupv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codersvn/kit_nodejs/issues"
+    "url": "https://github.com/codersvn/supporter/issues"
   },
-  "homepage": "https://github.com/codersvn/kit_nodejs#readme",
+  "homepage": "https://github.com/codersvn/supporter#readme",
   "dependencies": {},
   "devDependencies": {
     "babel": "^6.23.0",
