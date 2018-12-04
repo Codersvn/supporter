@@ -1,0 +1,6 @@
+#!/bin/bash
+
+yarn build
+
+rm -rf /Volumes/Data/Works/Projects/packages/javascript/test/node_modules/@vicoders/support/*
+cp -R dist/* /Volumes/Data/Works/Projects/packages/javascript/test/node_modules/@vicoders/support/
