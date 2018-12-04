@@ -2,8 +2,8 @@ export const nfNotifyStyle = `
 .nf-notify-css-icon.nf-notify-icon.close {
   color: #fff;
   position: absolute;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 .nf-notify-css-icon.nf-notify-icon.close:before {
@@ -14,7 +14,7 @@ export const nfNotifyStyle = `
   content: "";
   position: absolute;
   top: 10px;
-  width: 21px;
+  width: 20px;
   height: 2px;
   background-color: #fff;
 }
@@ -24,10 +24,10 @@ export const nfNotifyStyle = `
 .nf-notify-css-icon.nf-notify-icon.check {
   color: #fff;
   position: absolute;
-  margin-left: -20px;
-  margin-top: 2px;
-  width: 14px;
-  height: 8px;
+  margin-left: -18px;
+  margin-top: 4px;
+  width: 10px;
+  height: 4px;
   border-bottom: 2px solid currentColor;
   border-left: 2px solid currentColor;
   transform: rotate(-45deg);
@@ -36,31 +36,28 @@ export const nfNotifyStyle = `
   display: none;
 }
 .nf-notify {
-  display: -ms-flexbox;
-  display: flex;
-  height: 0;
   color: #fff;
-  overflow: hidden;
-  -ms-flex-align: center;
-  align-items: center;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
 }
 .nf-notify .nf-notify-container {
   display: flex;
-  width: 100%;
+  align-items: center;
+  padding: 8px;
 }
 .nf-notify .nf-notify-container .nf-notify-content {
-  flex-grow: 1;
   text-align: center;
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
 }
 .nf-notify .nf-notify-container .nf-close-btn {
-  width: 30px;
-  position: relative;
-  padding: 0 5px;
+  flex-shrink: 1;
+  width: 20px;
+  height: 20px;
 }
 .nf-notify .nf-notify-container .right-align {
   float: right;
@@ -79,6 +76,65 @@ export const nfNotifyStyle = `
 }
 .notify.notify-warning {
   background: #fa9325;
+}
+
+.nf-animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.nf-animated.fast {
+  animation-duration: 800ms;
+}
+
+.nf-animated.faster {
+  animation-duration: 500ms;
+}
+
+.nf-animated.slow {
+  animation-duration: 2s;
+}
+
+.nf-animated.slower {
+  animation-duration: 3s;
+}
+
+@keyframes nfFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.nfFadeInDown {
+  animation-name: nfFadeInDown;
+}
+
+@keyframes nfFadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.nfFadeOutUp {
+  animation-name: nfFadeOutUp;
+}
+
+@media (prefers-reduced-motion) {
+  .nf-animated {
+    animation: unset !important;
+    transition: none !important;
+  }
 }
 
 `;
