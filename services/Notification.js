@@ -53,7 +53,7 @@ export default class Notification {
 
     const notify = document.createElement('div');
     notify.id = 'nf-notify';
-    notify.className = 'nf-notify notify notify-' + type;
+    notify.className = 'nf-notify notify-' + type;
 
     let icon = '';
 

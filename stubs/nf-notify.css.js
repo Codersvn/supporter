@@ -32,7 +32,7 @@ export const nfNotifyStyle = `
   border-left: 2px solid currentColor;
   transform: rotate(-45deg);
 }
-.notify.notify-warning .nf-notify-css-icon.nf-notify-icon.check {
+.nf-notify.notify-warning .nf-notify-css-icon.nf-notify-icon.check {
   display: none;
 }
 .nf-notify {
@@ -72,10 +72,10 @@ export const nfNotifyStyle = `
   color: #fff;
   text-decoration: underline;
 }
-.notify.notify-success {
+.nf-notify.notify-success {
   background: #00e676;
 }
-.notify.notify-warning {
+.nf-notify.notify-warning {
   background: #fa9325;
 }
 
