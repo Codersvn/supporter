@@ -1,10 +1,10 @@
 {
   "name": "@vicoders/support",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Vicoders Support",
   "scripts": {
     "test": "jest --forceExit",
-    "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log,error_code.md,README.md --copy-files",
+    "build": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log,error_code.md --copy-files",
     "publish_module": "npx @codersvn/npm-auto-version && npm run build && cd dist && npm publish --access public",
     "publish_module_only": "npm run build && cd dist && npm publish --access public"
   },
