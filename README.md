@@ -29,16 +29,15 @@ yarn add @vicoders/support
 The notification library
 
 ```javascript
-import { Notification } from '@vicoders/support/services';
+// Partial import
+import Notification from '@vicoders/support/services/Notification';
+// Or you can do like this
+// import { Notification } from '@vicoders/support/services';
 
-// Or partial import
-// import Notification from "@vicoders/support/services/Notification";
-const notification = new Notification();
-
-notification.show('success', 'This is a successed message and it will display for 3000 ms', 3000); // show the loader
-notification.show('success', 'This one display forever until you remove it');
-notification.show('warning', 'ALERT!!!'); // and the warning type
-notification.remove(); // hide the loader
+Notification.show('success', 'This is a successed message and it will display for 3000 ms', 3000); // show the loader
+Notification.show('success', 'This one display forever until you remove it');
+Notification.show('warning', 'ALERT!!!'); // and the warning type
+Notification.remove(); // hide the notification
 ```
 
 ### Loader
@@ -46,16 +45,11 @@ notification.remove(); // hide the loader
 The loading animation
 
 ```javascript
-import { Loader } from '@vicoders/support/services';
+// partial import
+import Loader from '@vicoders/support/services/Loader';
+// Or you can do like this
+// import { Loader } from '@vicoders/support/services';
 
-// Or partial import
-// import Loader from "@vicoders/support/services/Loader";
-const loader = new Loader();
-
-loader.show(); // show the loader
-loader.hide(); // hide the loader
-
-// another way
-new Loader().show();
-new Loader().hide();
+Loader.show(); // show the loader
+Loader.hide(); // hide the loader
 ```

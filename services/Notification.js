@@ -2,11 +2,7 @@ import { nfNotifyStyle } from '../stubs/nf-notify.css';
 import { Helpers } from '../ultis/Helpers';
 
 export default class Notification {
-  constructor() {
-    Helpers.addInlineStyle('nf-notify-style', nfNotifyStyle);
-  }
-
-  fadeOut(el) {
+  static fadeOut(el) {
     el.className = el.className
       .split(' ')
       .filter(function(item) {
@@ -17,7 +13,7 @@ export default class Notification {
     return el;
   }
 
-  fadeIn(el) {
+  static fadeIn(el) {
     el.className = el.className
       .split(' ')
       .concat(['nf-animated', 'faster', 'nfFadeInDown'])
@@ -25,12 +21,26 @@ export default class Notification {
     return el;
   }
 
-  scrollTop(pixel) {
+  static scrollTop(pixel) {
     pixel = pixel || 0;
     document.scrollTop = pixel;
   }
 
-  show(type, content, time, scrollTop, options) {
+  /**
+   * Display notification
+   *
+   * @param String type
+   * @param String content
+   * @param String time to display
+   * @param Boolean scroll to top if notification is showned
+   * @param {*} options
+   *
+   * @return Element
+   */
+
+  static show(type, content, time, scrollTop, options) {
+    Helpers.addInlineStyle('nf-notify-style', nfNotifyStyle);
+
     options = options || {};
     time = time || 0;
     var _this = this;
@@ -75,9 +85,16 @@ export default class Notification {
     document.getElementsByClassName('nf-close-btn')[0].addEventListener('click', function() {
       _this.remove();
     });
+
+    return notify;
   }
 
-  remove() {
+  /**
+   * Hide notification
+   *
+   * @return void
+   */
+  static remove() {
     const notify = document.getElementById('nf-notify');
     if (notify !== null) {
       // notify.remove();

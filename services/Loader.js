@@ -2,10 +2,13 @@ import { Helpers } from '../ultis/Helpers';
 import { nfLoaderStyle } from '../stubs/nf-loader.css';
 
 export default class Loader {
-  constructor() {
+  /**
+   * Show loader
+   *
+   * @return void
+   */
+  static show() {
     Helpers.addInlineStyle('nf-loader', nfLoaderStyle);
-  }
-  show() {
     const el = document.getElementById('nf-preloader');
     if (el === null) {
       const notify = document.createElement('div');
@@ -14,7 +17,13 @@ export default class Loader {
       document.getElementsByTagName('body')[0].appendChild(notify);
     }
   }
-  hide() {
+
+  /**
+   * Hide loader
+   *
+   * @return void
+   */
+  static hide() {
     const el = document.getElementById('nf-preloader');
     if (el !== null) {
       el.remove();

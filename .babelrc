@@ -1,4 +1,12 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-object-rest-spread", ["babel-plugin-transform-builtin-extend", { "globals": ["Error", "Array"] }]]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "comments": true,
+  "plugins": [["@babel/plugin-proposal-class-properties", { "loose": true }]]
 }

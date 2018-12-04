@@ -56,6 +56,7 @@ export const nfNotifyStyle = `
 }
 .nf-notify .nf-notify-container .nf-close-btn {
   flex-shrink: 1;
+  cursor: pointer;
   width: 20px;
   height: 20px;
 }
